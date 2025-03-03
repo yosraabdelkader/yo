@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="588.0" prefWidth="788.0" stylesheets="@table.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.ListeUsersController">
+    <children>
+        <!-- Barre de navigation avec boutons -->
+        <HBox prefHeight="55.0" prefWidth="789.0" style="-fx-background-color: #2C3E50; -fx-padding: 10; -fx-spacing: 10; -fx-alignment: center-left;">
+            <children>
+                <!-- Bouton Accueil -->
+                <Button mnemonicParsing="false" onAction="#Acceuil" prefHeight="50.0" prefWidth="120.0" styleClass="nav-btn" text="Accueil" />
+                <!-- Bouton Supprimer -->
+                <Button mnemonicParsing="false" onAction="#supp" prefHeight="50.0" prefWidth="120.0" styleClass="btn-delete" text="Supprimer" />
+                <!-- Bouton Bloquer -->
+                <Button mnemonicParsing="false" onAction="#bloq" prefHeight="50.0" prefWidth="120.0" styleClass="btn-update" text="Bloquer" />
+                <!-- Bouton Désactiver -->
+                <Button mnemonicParsing="false" onAction="#desable" prefHeight="50.0" prefWidth="120.0" styleClass="btn" text="Désactiver" />
+                <!-- Bouton Modifier -->
+                <Button mnemonicParsing="false" onAction="#Modifier" prefHeight="50.0" prefWidth="120.0" styleClass="btn-update" text="Modifier" />
+                <!-- Champ de recherche -->
+                <TextField fx:id="filtre" onKeyPressed="#handleSearch" prefHeight="50.0" prefWidth="256.0" promptText="Rechercher..." styleClass="search-box" />
+            </children>
+        </HBox>
+
+        <!-- GridPane pour afficher les utilisateurs -->
+        <GridPane fx:id="usersGrid" layoutX="1.0" layoutY="60.0" prefHeight="528.0" prefWidth="788.0" styleClass="grid-pane">
+            <!-- Columns will be populated dynamically in the controller -->
+        </GridPane>
+    </children>
+</AnchorPane>
